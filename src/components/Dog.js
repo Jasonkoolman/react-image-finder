@@ -24,11 +24,13 @@ class Dog extends Component {
   }
 
   render() {
+    const { loading, imageUrl } = this.state;
+
     return (
       <div className="card">
         <h3>Dogs</h3>
-        <SearchForm disabled={this.state.loading} onSubmit={this.search.bind(this)}/>
-        <DynamicImage alt="Dog" src={this.state.imageUrl}/>
+        <SearchForm disabled={loading} onSubmit={this.search.bind(this)}/>
+        <DynamicImage alt="Dog" src={imageUrl}/>
       </div>
     )
   }
