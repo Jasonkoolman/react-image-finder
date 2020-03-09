@@ -21,8 +21,8 @@ class SearchForm extends Component {
 
     return (
       <form className="search-form" onSubmit={submit}>
-        <Input className="input" type="search" placeholder="Search query" disabled={disabled} onChange={setQuery} />
-        <Button className="btn" type="submit">Search</Button>
+        <Input type="search" placeholder="Search query" disabled={disabled} onChange={setQuery} />
+        <Button type="submit">Search</Button>
       </form>
     );
   }
