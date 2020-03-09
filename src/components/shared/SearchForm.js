@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './Button';
 
 class SearchForm extends Component {
   state = {
@@ -18,7 +19,7 @@ class SearchForm extends Component {
     return (
       <form className="search-form" onSubmit={submit}>
         <input className="input" type="search" placeholder="Search query" onChange={setQuery} />
-        <button className="btn" type="submit">Search</button>
+        <Button className="btn" type="submit">Search</Button>
       </form>
     );
   }
