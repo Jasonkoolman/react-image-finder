@@ -1,0 +1,12 @@
+@import '../base/variables';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #FFF;
+}
+
+.search-form {
+    display: flex;
+}
