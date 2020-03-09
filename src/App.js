@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Dog from './components/Dog';
+import Cat from './components/Cat';
 
 function App() {
   return (
@@ -8,7 +9,14 @@ function App() {
       <header className="app-header"></header>
       <main className="app-content">
         <h1>Image Finder</h1>
-        <Dog/>
+        <div className="row">
+          <div className="column">
+            <Dog/>
+          </div>
+          <div className="column">
+            <Cat/>
+          </div>
+        </div>
       </main>
     </div>
   );

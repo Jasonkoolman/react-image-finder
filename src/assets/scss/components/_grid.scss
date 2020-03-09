@@ -1,0 +1,13 @@
+.row {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 720px) {
+        flex-direction: row;
+    }
+}
+
+.column {
+    flex: 1;
+    padding: 16px;
+}
