@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { findImage } from '../services/DogService';
 import SearchForm from './shared/SearchForm';
+import DynamicImage from './shared/DynamicImage';
 
 class Dog extends Component {
   state = {
@@ -27,7 +28,7 @@ class Dog extends Component {
       <div className="card">
         <h3>Dogs</h3>
         <SearchForm disabled={this.state.loading} onSubmit={this.search.bind(this)}/>
-        <img alt="Dog" src={this.state.imageUrl}/>
+        <DynamicImage alt="Dog" src={this.state.imageUrl}/>
       </div>
     )
   }

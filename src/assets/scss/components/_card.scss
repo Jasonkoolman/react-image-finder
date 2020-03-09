@@ -10,3 +10,20 @@
 .search-form {
     display: flex;
 }
+
+.dynamic-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: 24px;
+    overflow: hidden;
+    background-color: #FAFAFA;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+    }
+}
