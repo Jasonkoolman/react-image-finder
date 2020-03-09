@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { findImage } from '../services/DogService';
+import SearchForm from './shared/SearchForm';
 
 class Dog extends Component {
   state = {
@@ -7,13 +8,13 @@ class Dog extends Component {
     imageUrl: null
   };
 
-  componentDidMount() {
+  search(query) {
     this.setState({
       ...this.state,
       loading: true,
     });
 
-    findImage('hound').then(url => {
+    findImage(query).then(url => {
       this.setState({
         loading: false,
         imageUrl: url
@@ -25,10 +26,7 @@ class Dog extends Component {
     return (
       <div className="card">
         <h3>Dogs</h3>
-        <form className="search-form">
-          <input type="search" placeholder="Search query" />
-          <button type="submit">Search</button>
-        </form>
+        <SearchForm disabled={this.state.loading} onSubmit={this.search.bind(this)}/>
         <img alt="Dog" src={this.state.imageUrl}/>
       </div>
     )

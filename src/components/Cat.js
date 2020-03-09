@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { findImage } from '../services/CatService';
+import SearchForm from './shared/SearchForm';
 
 class Cat extends Component {
   state = {
@@ -7,7 +8,7 @@ class Cat extends Component {
     imageUrl: null
   };
 
-  componentDidMount() {
+  search() {
     this.setState({
       ...this.state,
       loading: true,
@@ -25,10 +26,7 @@ class Cat extends Component {
     return (
       <div className="card">
         <h3>Cats</h3>
-        <form className="search-form">
-          <input type="search" placeholder="Search query" />
-          <button type="submit">Search</button>
-        </form>
+        <SearchForm disabled={this.state.loading} onSubmit={this.search.bind(this)}/>
         <img alt="Cat" src={this.state.imageUrl}/>
       </div>
     )
