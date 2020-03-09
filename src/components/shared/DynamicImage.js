@@ -7,6 +7,8 @@ class DynamicImage extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.src && this.props.src !== prevProps.src) {
+      // the image source is defined and different then the current
+      // source, so we can safely assume a (fresh) image is loading
       this.setState({ loading: true })
     }
   }
@@ -17,7 +19,6 @@ class DynamicImage extends Component {
 
     return (
       <div className='dynamic-image'>
-        { this.state.loading.toString() }
         { src && <img alt={alt} src={src} onLoad={onLoad} /> }
       </div>
     )
