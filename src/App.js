@@ -1,8 +1,8 @@
 import React from 'react';
 import { ReactComponent as Logo } from './assets/img/logo.svg';
-import './App.scss';
 import Dog from './components/Dog';
 import Cat from './components/Cat';
+import './App.scss';
 
 function App() {
   return (
