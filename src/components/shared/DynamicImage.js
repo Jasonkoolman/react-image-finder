@@ -13,13 +13,25 @@ class DynamicImage extends Component {
     }
   }
 
-  render() {
+  renderImage() {
     const { src, alt } = this.props;
     const onLoad = () => this.setState({ loading: false });
 
+    if (src) {
+      return (
+        <a href={src} target="_blank" rel="noopener noreferrer">
+          <img alt={alt} src={src} onLoad={onLoad} />
+        </a>
+      )
+    }
+  }
+
+  render() {
+    const { loading } = this.state;
+
     return (
-      <div className='dynamic-image'>
-        { src && <img alt={alt} src={src} onLoad={onLoad} /> }
+      <div className={'dynamic-image ' + (loading ? 'loading' : '')}>
+        { this.renderImage()  }
       </div>
     )
   }
