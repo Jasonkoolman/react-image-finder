@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import Dog from './components/Dog';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <header className="app-header"></header>
       <main className="app-content">
         <h1>Image Finder</h1>
+        <Dog/>
       </main>
     </div>
   );
