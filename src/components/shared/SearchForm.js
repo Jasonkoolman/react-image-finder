@@ -23,7 +23,7 @@ class SearchForm extends Component {
     return (
       <form className="search-form" onSubmit={submit}>
         <Input type="search" placeholder="Search query" disabled={disabled} onChange={setQuery} />
-        <Button type="submit">
+        <Button type="submit" disabled={disabled}>
           <SearchIcon/> Search
         </Button>
       </form>
