@@ -8,13 +8,13 @@ class Cat extends Component {
     imageUrl: null
   };
 
-  search() {
+  search(query) {
     this.setState({
       ...this.state,
       loading: true,
     });
 
-    findImage('cat').then(url => {
+    findImage(query).then(url => {
       this.setState({
         loading: false,
         imageUrl: url
