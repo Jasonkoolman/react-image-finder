@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap');
+
+// Typography
+$font-family-base:      'Roboto', 'Open Sans', sans-serif;
+$font-family-heading:   'Montserrat', sans-serif;
+$font-size:             16px;
+$line-height:           1.5;
+
+// Colors
+$color-dark-grey:   #343434;
+$color-light-grey:  #E8E8E8;
+$color-dark-blue:   #00526e;
+$color-light-blue:  #007cc1;
+$color-violet:      #aa418c;
+$color-orange:      #ff9300;
+
+// Semantic colors
+$color-base:        $color-dark-grey;
+$color-primary:     $color-dark-blue;
+$color-secondary:   $color-violet;
+$color-action:      $color-light-blue;
+$color-accent:      $color-orange;
